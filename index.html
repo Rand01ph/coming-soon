@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>松果科技 - Coming Soon</title> <!-- Add your title -->
+    <link rel="shortcut icon" href="images/icon.png" /> <!-- Add your own favicon to the images folder -->
+    
+    <!-- STYLES -->
+    
+    <!-- Bootstrap 3.0.2 -->
+    <!-- link rel="stylesheet" type="text/css" href="http://libs.useso.com/js/bootstrap/3.2.0/css/bootstrap.min.css" / -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome-->
+    <link rel="stylesheet" type="text/css" href="http://libs.useso.com/js/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <!-- Ketchup -->
+    <link rel="stylesheet" type="text/css" href="styles/jquery.ketchup.css" />
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="styles/animate.min.css" />
+    <!-- Page Slide -->
+    <link rel="stylesheet" type="text/css" href="srobbin-jquery-pageslide/jquery.pageslide.css" />
+    <!-- STYLES.CSS -->
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="scripts/respond.min.js"></script>
+        <script type="text/javascript" src="scripts/html5shiv.js"></script>
+    <![endif]-->
+    
+</head>
+<body data-spy="scroll" data-target="#menu">
+    
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu"><i class="fa fa-bars"></i></button>
+                    <a class="navbar-brand smooth" href="#home-link"><img class="logo" alt="OverSized" src="images/logo.png" /></a> <!-- Add your own logo to the images folder -->
+                </div> <!-- end navbar-header -->
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#home-link"
+                            class="smooth">首页</a></li>
+						<li><a href="#countdown-link" class="smooth">倒计时</a></li>
+						<li><a href="#updates-link"
+                            class="smooth">上线通知</a></li>
+						<li><a href="#about-link" class="smooth">关于我们</a></li>
+						<li><a href="#contact-link" class="smooth">联系我们</a></li>
+						<li><a href="#connect-link" class="smooth">关注我们</a></li>
+                    </ul> <!-- end navbar-nav -->
+                </div><!-- end navbar-collapse -->
+            </div> <!-- end container -->
+        </nav> <!-- end navbar -->
+    </header> <!-- end header -->
+    
+    <div id="home-link"></div>
+    <div class="main sections text-center">
+        <div class="section-wrapper">
+            <div class="container">
+                <h1 class="heading">武汉松果科技有限公司</h1>
+                <p>我们的官网很快就会上线，您可以到处逛逛，也可以每天来这里刷新，或者在下面通过邮件订阅我们的上线信息，当官网上线时我们会第一时间通知您。</p>
+            </div> <!-- end container -->
+        </div> <!-- end section-wrapper -->
+    </div> <!-- end main -->
+    
+    <div id="countdown-link"></div>
+    <div class="countdown sections text-center">
+    	<div class="section-wrapper">
+            <div class="container">
+                <h1 class="heading">很快回来!</h1>
+                <p>不要着急，距离官网上线还有:</p>
+                <ul id="countdown" class="list-inline">
+                    <li class="time">
+                        <span class="days">00</span>
+                        <p class="timeRefDays">days</p>
+                    </li> <!-- end time -->
+                    <li class="time">
+                        <span class="hours">00</span>
+                        <p class="timeRefHours">hours</p>
+                    </li> <!-- end time -->
+                    <li class="time">
+                        <span class="minutes">00</span>
+                        <p class="timeRefMinutes">minutes</p>
+                    </li> <!-- end time -->
+                    <li class="time">
+                        <span class="seconds">00</span>
+                        <p class="timeRefSeconds">seconds</p>
+                    </li> <!-- end time -->
+                </ul> <!-- end countdown -->
+            </div> <!-- end container -->
+    	</div> <!-- end section-wrapper -->
+    </div> <!-- end countdown -->
+    
+    <div id="updates-link"></div>
+    <div class="newsletter sections text-center">
+        <div class="section-wrapper">
+            <div class="container">
+                <h1 class="heading">上线通知</h1>
+                <p>留下您的Email，官网上线后我们将邮件通知您。 ;)</p>
+                <form action="scripts/newsletter.php" method="post" id="newsletter-form" class="center-block">
+                    <div class="input-group input-group-lg">
+                        <input type="email" name="newsletter-email"
+                        id="newsletter-email" class="form-control"
+                        placeholder="留下您的Email" data-validate="validate(required, email)" />
+                        <span class="input-group-btn">
+                            <input type="submit" id="newsletter-submit"
+                            class="btn" value="通知我" />
+                        </span> <!-- end input-group-btn -->
+                    </div> <!-- end input-group -->
+                    <div class="alert alert-success" id="newsletter-success"></div>
+                    <div class="alert alert-danger" id="newsletter-error"></div>
+                </form> <!-- end newsletter-form -->
+            </div> <!-- end container -->
+        </div> <!-- end section-wrapper -->
+    </div> <!-- end newsletter -->
+    
+    <div id="about-link"></div>
+    <div class="about sections text-center">
+        <div class="section-wrapper">
+            <div class="container">
+                <h1 class="heading">关于我们</h1>
+                <p>国内性价比最高的互联网开发团队</p>
+                <div class="row">
+                    <div class="about-item col-sm-4">
+                        <div class="about-icon"><i class="fa fa-html5"></i></div>
+                        <h2 class="sub-heading">Web开发</h2>
+                            <p class="text-center">定制化软件开发</p>
+                            <p class="text-center">云解决方案</p>
+                            <p class="text-center">初创型软件</p>
+                            <p class="text-center">移动网站优化</p>
+                    </div> <!-- end about-item -->
+                    <div class="about-item col-sm-4">
+                        <div class="about-icon"><i class="fa fa-apple"></i></div>
+                        <h2 class="sub-heading">App开发</h2>
+                            <p class="text-center">原生系统APP</p>
+                            <p class="text-center">跨平台APP</p>
+                            <p class="text-center">云端化</p>
+                            <p class="text-center">用户界面和用户体验设计</p>
+                    </div> <!-- end about-item -->
+                    <div class="about-item col-sm-4">
+                        <div class="about-icon"><i class="fa fa-fighter-jet"></i></div>
+                        <h2 class="sub-heading">整体解决方案</h2>
+                            <p class="text-center">后台集成服务</p>
+                            <p class="text-center">API集成与研发</p>
+                            <p class="text-center">数据集成</p>
+                            <p class="text-center">企业应用集成</p>
+                    </div> <!-- end about-item -->
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </div> <!-- end section-wrapper -->
+    </div> <!-- end about -->
+    
+    <div id="contact-link"></div>
+    <div class="contact sections text-center">
+        <div class="section-wrapper">
+            <div class="container">
+                <h1 class="heading">联系我们</h1>
+                <p>您可以在这里给我们留言。</p>
+                <form action="scripts/contact.php" method="post" id="contact-form" class="center-block">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon tool-tip" title="Your Name" data-placement="left"><i class="fa fa-user"></i></span>
+                        <input type="text" class="form-control"
+                        id="contact-name" name="contact-name"
+                        placeholder="您的称呼" data-validate="validate(required)" />
+                    </div> <!-- end input-group -->
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon tool-tip" title="Your Email" data-placement="left"><i class="fa fa-envelope"></i></span>
+                        <input type="email" class="form-control"
+                        id="contact-email" name="contact-email"
+                        placeholder="您的Email" data-validate="validate(required, email)" />
+                    </div> <!-- end input-group -->
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon tool-tip" title="Your Website (Optional)" data-placement="left"><i class="fa fa-globe"></i></span>
+                        <input type="url" class="form-control"
+                        id="contact-website" name="contact-website"
+                        placeholder="您的网站 (可选)" />
+                    </div> <!-- end input-group -->
+                    <div class="input-group input-group-lg input-group-lg-textarea">
+                        <span class="input-group-addon tool-tip" title="Your Message" data-placement="left"><i class="fa fa-pencil"></i></span>
+                        <textarea class="form-control" id="contact-message"
+                            name="contact-message" placeholder="您的留言" rows="5" data-validate="validate(rangelength(1, 1000))"></textarea>
+                    </div> <!-- end input-group -->
+                    <input type="submit" class="btn btn-lg btn-block"
+                    id="contact-form-submit" name="contact-form-submit"
+                    value="发送" />
+                    <div class="alert alert-success" id="contact-success"></div>
+                    <div class="alert alert-danger" id="contact-error"></div>
+                </form> <!-- end contact-form -->
+            </div> <!-- end container -->
+        </div> <!-- end section-wrapper -->
+    </div> <!-- end contact -->
+    
+    <div id="connect-link"></div>
+    <div class="connect sections text-center">
+        <div class="section-wrapper">
+            <div class="container">
+                <h1 class="heading">关注我们</h1>
+                <p>我们有很多社交账号，您可以通过这些渠道关注我们。</p>
+                <ul class="social-icons list-inline">
+                    <li><a href="http://weibo.com/rand01ph" class="social-icon tool-tip" title="微博" data-placement="top"><i class="fa fa-weibo"></i></a></li>
+                    <li><a href="#" class="social-icon tool-tip" title="微信" data-placement="top"><i class="fa fa-weixin"></i></a></li>
+                    <li><a href="https://twitter.com/Rand01ph" class="social-icon tool-tip" title="Twitter" data-placement="top"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/songguokeji" class="social-icon tool-tip" title="Facebook" data-placement="top"><i class="fa fa-facebook"></i></a></li>
+                </ul>
+                <p class="copyright">武汉松果科技有限公司 Copyright &copy;
+                2014-2015</p>
+            </div> <!-- end container -->
+        </div> <!-- end section-wrapper -->
+    </div> <!-- end connect -->
+    
+    <!-- SCRIPTS -->
+    
+    <!-- jQuery 1.10.2 -->
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <!-- Bootstrap 3.0.2 -->
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Ketchup -->
+    <script type="text/javascript" src="scripts/jquery.ketchup.all.min.js"></script>
+    <!-- InView -->
+    <script type="text/javascript" src="scripts/jquery.inview.js"></script>
+    <!-- Retina -->
+    <script type="text/javascript" src="scripts/retina.js"></script>
+    <!-- Countdown -->
+    <script type="text/javascript" src="scripts/countdown.js"></script>
+    <!-- Page Slide -->
+    <script type="text/javascript" src="srobbin-jquery-pageslide/jquery.pageslide.js"></script>
+    <!-- SCRIPTS.JS -->
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+
+</body>
+</html>
